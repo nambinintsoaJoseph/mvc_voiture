@@ -16,14 +16,14 @@
 
     
 
-    <?php require('../controler/controler.php'); ?>
+    <?php require('../controler/connexion_base.php'); ?>
 
     <?php 
         $requette = $bdd->query('SELECT * FROM voiture');
 
         while($donnee = $requette->fetch()) {
     ?>
-    <div class="conteneur-flexible flex-direction-column">
+    <div class="conteneur-flexible flex-direction-column conteneur-list-voiture">
         <div>
             <p>Matricule : <?php echo $donnee['matricule']; ?></p>
         </div>

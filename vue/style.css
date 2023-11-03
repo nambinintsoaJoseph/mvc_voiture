@@ -7,6 +7,10 @@
     margin-top: 5px;
 }
 
+.conteneur-list-voiture {
+    background: linear-gradient(to right, #EF9A9A, #80CBC4);
+}
+
 h1 {text-align: center;}
 
 .flex-direction-row{flex-direction: row;}
