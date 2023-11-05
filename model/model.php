@@ -32,7 +32,8 @@
         }
 
         // Supprime un voiture dans la base a partir d'un objet Voiture : 
-        public function supprimer_dans_la_base() {
+        public function supprimer_dans_la_base() 
+        {
             include('../controler/connexion_base.php');
             $supprimer = $bdd->prepare('CALL supprimerVoiture(:matricule)');
             $supprimer->execute(
