@@ -40,7 +40,7 @@
         </div>
 
         <div class="conteneur-flexible">
-            <a href="../controler/modfier.php?<?php echo 'matricule=' . $donnee['matricule'] . '?couleur=' . $donnee['couleur'] . '?puissance=' . $donnee['puissance'] . '?type=' . $donnee['type']; ?>" class="flex-grow modifier">Modifier</a>
+            <a href="../vue/modifier.php?<?php echo 'matricule=' . $donnee['matricule'] . '&couleur=' . $donnee['couleur'] . '&puissance=' . $donnee['puissance'] . '&type=' . $donnee['type']; ?>" class="flex-grow modifier">Modifier</a>
             <a href="../controler/suppression.php?<?php echo 'matricule=' . $donnee['matricule']; ?>" class="flex-grow supprimer">Supprimer</a>
         </div>
     </div>

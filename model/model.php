@@ -41,6 +41,24 @@
             $supprimer->closeCursor();
         }
 
+        // Modifie un voiture a partir d'un objet Voiture : 
+        public function modifier_dans_la_base($ancienMatricule,$Nmatricule, $Ncouleur, $Npuissance, $Ntype)
+        {
+            include('../controler/connexion_base.php');
+            
+            // Mise a jour des propriete : 
+            $this->_matricule = $Nmatricule; 
+            $this->_couleur = $Ncouleur; 
+            $this->_puissance = $Npuissance; 
+            $this->_type = $Ntype; 
+
+            $modifier = $bdd->prepare('CALL modifierVoiture(?, ?, ?, ?, ?)'); 
+            $modifier->execute(
+                array($ancienMatricule, $Nmatricule, $Ncouleur, $Npuissance, $Ntype); 
+            ); 
+
+            $modifier->closeCursor(); 
+        }
+
     }
-    
 ?>
