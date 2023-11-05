@@ -17,7 +17,7 @@
     <?php require('../controler/connexion_base.php'); ?>
 
     <?php 
-        $requette = $bdd->query('SELECT * FROM voiture');
+        $requette = $bdd->query('SELECT * FROM voiture ORDER BY id DESC');
 
         while($donnee = $requette->fetch()) {
     ?>
