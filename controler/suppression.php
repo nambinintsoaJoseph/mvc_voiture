@@ -1,5 +1,4 @@
 <?php 
-    
     require_once('../model/model.php'); 
 
     if(isset($_GET['matricule'])) {

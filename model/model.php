@@ -13,7 +13,6 @@
             if(isset($puissance)) {$this->_puissance = $puissance;}
             if(isset($type)) {$this->_type = $type;}
         }
-
         
         // Insère un objet Voiture dans la base de donnée : 
         public function inserer_dans_la_base() 
