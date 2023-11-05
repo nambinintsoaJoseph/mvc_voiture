@@ -1,5 +1,7 @@
 <?php 
+    // Connexion à la base de donnée : 
     require_once('../controler/connexion_base.php');
+    
     class Voiture {
         private $_matricule; 
         private $_couleur; 

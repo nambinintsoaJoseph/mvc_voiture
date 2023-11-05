@@ -14,8 +14,6 @@
 
     <h1>Liste des voitures</h1>
 
-    
-
     <?php require('../controler/connexion_base.php'); ?>
 
     <?php 
