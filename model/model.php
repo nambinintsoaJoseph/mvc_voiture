@@ -1,14 +1,16 @@
 <?php 
     // Connexion à la base de donnée : 
     require_once('../controler/connexion_base.php');
-    
-    class Voiture {
+
+    class Voiture 
+    {
         private $_matricule; 
         private $_couleur; 
         private $_puissance; 
         private $_type; 
 
-        public function __construct($matricule ,$couleur, $puissance, $type) {
+        public function __construct($matricule ,$couleur, $puissance, $type) 
+        {
             $this->_matricule = $matricule;
             $this->_couleur = $couleur; 
             $this->_puissance = $puissance; 
@@ -16,8 +18,10 @@
         }
 
         // Implémentation des méthodes : 
-        public function inserer_dans_la_base() {
-            $requette = $bdd->prepare('CALL ajouterVoiture(?, ?, ?, ?)');
+
+        public function inserer_dans_la_base() 
+        {
+            $requette = $bdd->prepare('CALL ajouterVoiture(:matricule, :couleur, :puissance, :type)');
             $requette->execute(
                 array(
                     'matricule' => $this->_matricule,
@@ -27,5 +31,11 @@
                 )
             );
         }
+
+        public function supprimer_dans_la_base() {
+            // On récupère l'ID de la voiture que l'on souhaite supprimer : 
+            
+        }
+
     }
 ?>
