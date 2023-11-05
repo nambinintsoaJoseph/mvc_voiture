@@ -24,6 +24,7 @@
     <div class="conteneur-flexible flex-direction-column conteneur-list-voiture">
         <div>
             <p>Matricule : <?php echo $donnee['matricule']; ?></p>
+            <input type="hidden" value="<?php echo $donnee['matricule']?>">
         </div>
 
         <div>
@@ -39,8 +40,8 @@
         </div>
 
         <div class="conteneur-flexible">
-            <a href="controler.php" class="flex-grow modifier">Modifier</a>
-            <a href="controler.php" class="flex-grow supprimer">Supprimer</a>
+            <a href="../controler/modfier.php?<?php echo 'matricule=' . $donnee['matricule']; ?>" class="flex-grow modifier">Modifier</a>
+            <a href="../controler/suppression.php?<?php echo 'matricule=' . $donnee['matricule']; ?>" class="flex-grow supprimer">Supprimer</a>
         </div>
     </div>
     <?php 

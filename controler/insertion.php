@@ -1,5 +1,5 @@
 <?php 
-    require_once('connexion_base.php'); 
+    require_once('../model/model.php'); 
 
     if(isset($_POST['matricule']) and isset($_POST['couleur']) and isset($_POST['puissance']) and isset($_POST['type'])) {
         $matricule = $_POST['matricule']; 

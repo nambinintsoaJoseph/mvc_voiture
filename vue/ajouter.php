@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Formulaire d'ajour d'une voiture</h1>
-    <form action="../controler.php" method="POST" class="conteneur-flexible flex-direction-column">
+    <form action="../controler/insertion.php" method="POST" class="conteneur-flexible flex-direction-column">
         <div class="conteneur-flexible">
             <label for="matricule" class="flex-basis20">Matricule : </label>
             <input type="text" name="matricule" id="matricule" class="flex-grow">

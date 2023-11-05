@@ -1,7 +1,4 @@
 <?php 
-    // Connexion à la base de donnée : 
-    require_once('../controler/connexion_base.php');
-
     class Voiture 
     {
         private $_matricule; 
@@ -11,18 +8,19 @@
 
         public function __construct($matricule ,$couleur, $puissance, $type) 
         {
-            $this->_matricule = $matricule;
-            $this->_couleur = $couleur; 
-            $this->_puissance = $puissance; 
-            $this->_type = $type; 
+            if(isset($matricule)) {$this->_matricule = $matricule;}
+            if(isset($couleur)) {$this->_couleur = $couleur;}
+            if(isset($puissance)) {$this->_puissance = $puissance;}
+            if(isset($type)) {$this->_type = $type;}
         }
 
-        // Implémentation des méthodes : 
-
+        
+        // Insère un objet Voiture dans la base de donnée : 
         public function inserer_dans_la_base() 
         {
-            $requette = $bdd->prepare('CALL ajouterVoiture(:matricule, :couleur, :puissance, :type)');
-            $requette->execute(
+            include('../controler/connexion_base.php');
+            $inserer = $bdd->prepare('CALL ajouterVoiture(:matricule, :couleur, :puissance, :type)');
+            $inserer->execute(
                 array(
                     'matricule' => $this->_matricule,
                     'couleur' => $this->_couleur, 
@@ -30,12 +28,19 @@
                     'type' => $this->_type
                 )
             );
+            $inserer->closeCursor();
         }
 
+        // Supprime un voiture dans la base a partir d'un objet Voiture : 
         public function supprimer_dans_la_base() {
-            // On récupère l'ID de la voiture que l'on souhaite supprimer : 
-            
+            include('../controler/connexion_base.php');
+            $supprimer = $bdd->prepare('CALL supprimerVoiture(:matricule)');
+            $supprimer->execute(
+                array('matricule' => $this->_matricule)
+            );
+            $supprimer->closeCursor();
         }
 
     }
+    
 ?>
