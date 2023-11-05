@@ -25,9 +25,9 @@
         </tr>
 
     <?php 
-        $requette = $bdd->query('SELECT * FROM voiture ORDER BY id DESC');
+        $listeVoiture = $bdd->query('SELECT * FROM voiture ORDER BY id DESC');
 
-        while($donnee = $requette->fetch()) 
+        while($donnee = $listeVoiture->fetch()) 
         {
     ?>
                 <tr>
@@ -41,6 +41,7 @@
             <?php 
                 
         }
+        $listeVoiture->closeCursor();
         ?>
     </table>
 </body>
