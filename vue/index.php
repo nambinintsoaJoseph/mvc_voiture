@@ -32,7 +32,7 @@
         </div>
 
         <div>
-            <p>Puissance : <?php echo $donnee['couleur']; ?> </p>
+            <p>Puissance : <?php echo $donnee['puissance']; ?> </p>
         </div>
         
         <div>

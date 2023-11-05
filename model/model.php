@@ -54,7 +54,7 @@
 
             $modifier = $bdd->prepare('CALL modifierVoiture(?, ?, ?, ?, ?)'); 
             $modifier->execute(
-                array($ancienMatricule, $Nmatricule, $Ncouleur, $Npuissance, $Ntype); 
+                array($ancienMatricule, $Nmatricule, $Ncouleur, $Npuissance, $Ntype)
             ); 
 
             $modifier->closeCursor(); 

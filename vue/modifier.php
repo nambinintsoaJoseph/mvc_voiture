@@ -1,5 +1,7 @@
 <?php 
     session_start(); 
+
+    $_SESSION['ancien_matricule'] = $_GET['matricule']; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +14,7 @@
 </head>
 <body>
 <h1>Modifier un voiture</h1>
-<form action="../controler/insertion.php" method="POST" class="conteneur-flexible flex-direction-column">
+<form action="../controler/modification.php" method="POST" class="conteneur-flexible flex-direction-column">
         <div class="conteneur-flexible">
             <label for="matricule" class="flex-basis20">Matricule : </label>
             <input type="text" name="matricule" id="matricule" class="flex-grow" value="<?php echo $_GET['matricule']; ?>">
