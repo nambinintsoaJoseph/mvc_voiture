@@ -1,20 +1,12 @@
-.conteneur-flexible {
-    display: flex;
-    color: black;
-    padding: 5px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
 h1 {text-align: center;}
-.flex-direction-row{flex-direction: row;}
-.flex-direction-column{flex-direction: column;}
-.flex-grow{flex-grow: 1;}
-.flex-basis20{flex-basis: 15%}
 a{text-decoration: none;}
 .modifier{background-color: #04AA6D;}
-.supprimer{background-color: #f44336;;}
+.supprimer{background-color: #f44336;}
+
+.ajouter {
+    background-color: #282a35; 
+    font-size: 1.1em;
+}
 
 .btn {
     border: none; 
@@ -48,11 +40,24 @@ table {
   
 th, td {
     text-align: center;
-    padding: 26px;
     padding: 20px;
 }
 
-  
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+/* Responsive design */
+@media screen and (max-width: 725px) {
+    th, td {
+        padding: 10px; 
+    }
+
+    .btn {
+        padding: 7px 14px; 
+    }
+}
+
+@media screen and (max-width: 572px) {
+    *{font-size: 0.95em;}
 }

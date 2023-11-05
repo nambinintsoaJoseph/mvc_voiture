@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flex.css">
 </head>
 <body>
     <h1>Formulaire d'ajour d'une voiture</h1>
@@ -32,8 +33,8 @@
             <input type="text" name="type" id="type" class="flex-grow">
         </div>
         
-
-        <input type="submit" value="Ajouter">
+        <br>
+        <input type="submit" value="Ajouter" class="btn">
     </form>
 </body>
 </html>

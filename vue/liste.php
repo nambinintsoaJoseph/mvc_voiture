@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flex.css">
     <title>MVC - Voiture</title>
 </head>
 <body>
-    <div>
-        <a href="ajouter.php" class="btn">Ajouter une voiture</a>
-    </div>
+    <a href="ajouter.php" class="btn ajouter">Ajouter une voiture</a>
 
     <h1>Liste des voitures</h1>
 
@@ -36,7 +35,7 @@
                     <td><?php echo $donnee['couleur']; ?></td>
                     <td><?php echo $donnee['puissance']; ?></td>
                     <td><?php echo $donnee['type']; ?></td>
-                    <td><a href="../vue/modifier.php?<?php echo 'matricule=' . $donnee['matricule'] . '&couleur=' . $donnee['couleur'] . '&puissance=' . $donnee['puissance'] . '&type=' . $donnee['type']; ?>" class="flex-grow modifier btn">Modifier</a></td>
+                    <td><a href="../vue/modifier.php?<?php echo 'matricule=' . $donnee['matricule'] . '&couleur=' . $donnee['couleur'] . '&puissance=' . $donnee['puissance'] . '&type=' . $donnee['type']; ?>" class="flex-grow modifier btn">Modifier&ensp;</a></td>
                     <td><a href="../controler/suppression.php?<?php echo 'matricule=' . $donnee['matricule']; ?>" class="flex-grow supprimer btn">Supprimer</a></td>
                 </tr>
             <?php 

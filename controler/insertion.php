@@ -13,7 +13,7 @@
         // Insertion dans la base de donnée : 
         $maVoiture->inserer_dans_la_base(); 
 
-        // Redirection vers index.php 
-        header('location:../vue/index.php'); 
+        // Redirection vers liste.php 
+        header('location:../vue/liste.php'); 
     }
 ?>
